@@ -1,0 +1,289 @@
+nav{
+    background: #333F48;
+    height: 80px;
+    width: 100%;
+  }
+  label.brand{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active,a:hover{
+    background: white;
+    color: black;
+    transition: .5s;
+    text-decoration: none;
+  }
+  .fa {
+      color:white;
+  }
+  .check{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  
+  @media (max-width: 952px){
+    label.brand{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+      font-family: 'Roboto Mono', monospace;
+    }
+  }
+  @media (max-width: 858px){
+    .check{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: black;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+      z-index: 2;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+      z-index: 2;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: white;
+      color: black;
+      text-decoration: none;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  }
+
+#head-text{
+	text-align: left;
+	padding-right: 7%;
+	padding-left: 7%;
+}
+
+.common {
+	display: flex;
+}
+
+.common .intro-text{
+	width: calc(100%/3);
+	padding: 3% 0;
+}
+
+.intro-text h1{
+	font-size: 64px
+}
+
+.intro-text p{
+	font-size: 24px
+}
+
+.common .cust-que{
+	width: calc(100%/1.5);
+	padding: 3%;
+}
+
+
+.collapsible {
+	background-color: #f1f1f1;
+	color: #555;
+	cursor: pointer;
+	width: 100%;
+	padding: 12.5px;
+	border: 1px #333F48 solid;
+	text-align: left;
+}
+
+.active, .collapsible:hover {
+	color: white;
+	background-color: #333F48;
+	transition: 0.5s;
+}
+
+.collapsible:after {
+	content: '\002B';
+	color: #555;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+
+.active:after {
+	content: "\2212";
+	color: white;
+}
+
+.content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	background-color: #fff;
+	padding: 0 25px;
+}
+
+@media (max-width: 1400px){
+    .common{
+		display: block;
+	}
+	.common .intro-text{
+		width: 100%;
+		text-align: center;
+	}
+	.common .cust-que{
+		width: 100%;
+	}
+  }
+  
+
+#que{
+	width: 100%;
+	background-color: #f1f1f1;
+}
+
+.inquiries{
+	text-align: center;
+	vertical-align: middle;
+}
+
+.inquiries div{
+	display: inline-block;
+}
+
+.inquiries h1{
+	font-size: 60px;
+}
+
+.inquiries p{
+	font-size: 30px;
+}
+
+.methods{
+	display: flex;
+	margin-left: 7%;
+	margin-right: 7%;
+}
+
+.contm{
+	width: calc(100%/4);
+	border: 1px #333F48 solid;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 3%;
+	text-align: center;
+	background-color: white;
+}
+
+.methods .textlink{
+	display: block;
+	border: 1px #333F48 solid;
+	padding: 10px;
+	text-decoration: none;
+	color: #333F48;
+}
+
+.methods .textlink:hover{
+	background-color: #333F48;
+	color: white;
+}
+
+.methods .iconlink {
+	color: #333F48;
+	padding-right: 7px;
+	padding-left: 7px;
+}
+
+@media (max-width: 1600px){
+   .methods{
+	   display: block;
+   }
+   .methods .contm{
+		width: 45%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 20px;
+   }
+  }
+
+@media (max-width: 1500px){
+   .methods{
+	   display: block;
+   }
+   .methods .contm{
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 20px;
+   }
+  }
+ 
+@media (max-width: 900px){
+   .methods{
+	   display: block;
+   }
+   .methods .contm{
+		width: 75%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 20px;
+   }
+  }
+
+@media (max-width: 650px){
+   .methods{
+	   display: block;
+   }
+   .methods .contm{
+		width: 100%;
+		margin-bottom: 20px;
+   }
+  }
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat",sans-serif;
+}
+
+h1{
+	font-size: 70px;
+	text-transform: uppercase;
+}
+
